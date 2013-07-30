@@ -1,0 +1,20 @@
+body {
+  font-family:"Trebuchet MS", Helvetica, sans-serif;
+}
+
+.map_border{
+  padding:1em;
+  background: #EEEEEE;
+  width: 945px;
+  border-radius: 10px;
+}
+
+#googleMap{
+  width:945px;
+  height:570px;
+}
+
+.main_wrapper{
+  width: 65em;
+  margin: 0 auto;
+}

@@ -32,6 +32,9 @@ $(function(){
           content: contentString
         });
         infowindow.open(map,markers[this.camera_id])
+        setTimeout(function(){
+            infowindow.close(map, markers[this.camera_id])
+          }, 5000)
       });
     }
   });

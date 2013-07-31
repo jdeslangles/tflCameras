@@ -1,19 +1,38 @@
-$(function(){
-  var mapOptions,
-      canvas,
-      map;
+// $(function(){
+//   var mapOptions,
+//       canvas,
+//       map;
 
-  // create an options hash
-  mapOptions = {
-    zoom:13,
-    center:new google.maps.LatLng(51.508742, -0.120850),
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
+//   mapOptions = {
+//     zoom:13,
+//     center:new google.maps.LatLng(51.508742, -0.120850),
+//     mapTypeId:google.maps.MapTypeId.ROADMAP
+//   };
+//   canvas = document.getElementById("googleMap");
+//   map = new google.maps.Map(canvas, mapOptions);
 
-  //grab our DOM element "googleMap" an assign it to the canvas variable
-  canvas = document.getElementById("googleMap");
+//   var cameras = $.getJSON('/cameras.json', function(data){
+//     cameras = data
+//     var markers = []
 
-  //create a new map, passing the canvas and mapOptions as arguments.
-  map = new google.maps.Map(canvas, mapOptions);
+//     for(var i=0; i < cameras.length; i++){
+//       var marker = new google.maps.Marker({
+//           position: new google.maps.LatLng(parseFloat(cameras[i].lat), parseFloat(cameras[i].lng)),
+//           map: map,
+//           title: 'text',
+//           camera_id: i
+//       });
+//       markers[i] = marker;
+//       google.maps.event.addListener(markers[i], 'click', function() {
+//         camera = cameras[this.camera_id]
+//         var contentString = '<div id="content"><img src="http://www.tfl.gov.uk/tfl/livetravelnews/trafficcams/cctv/' +
+//         cameras[this.camera_id].file + '"><p>' + cameras[this.camera_id].location + ", " + cameras[this.camera_id].postcode + '</p></div>';
 
-});
+//         var infowindow = new google.maps.InfoWindow({
+//           content: contentString
+//         });
+//         infowindow.open(map,markers[this.camera_id])
+//       });
+//     }
+//   });
+// });
